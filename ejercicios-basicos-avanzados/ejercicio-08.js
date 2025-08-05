@@ -11,15 +11,15 @@ const avengers = [
 ];
 
 function findLongestWord(stringList) {
-    let longestWord = stringList[0];
+    let primeraPalabra = stringList[0];
 
     for (let index = 1; index < stringList.length; index++) {
-        if (stringList[index].length > longestWord.length) {
-            longestWord = stringList[index];
+        if (stringList[index].length > primeraPalabra.length) {
+            primeraPalabra = stringList[index];
         }
     }
 
-    return longestWord;
+    return primeraPalabra;
 }
 
 const longestAvenger = findLongestWord(avengers);
