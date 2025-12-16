@@ -9,3 +9,30 @@ const users = [
     { name: "Bruce", years: 32 },
     { name: "Khamala", years: 16 },
 ];
+
+/*
+for (const user of users){
+    if (user.years < 18) {
+        console.log("Usuarios menores de edad: " + user.name);
+    }
+    if (user.years >= 18) {
+        console.log("Usuarios mayores de edad: " + user.name);
+    }
+}*/
+
+// Entiendo que esto es lo que pide el enunciado, pero queda más limpio si añado unas listas:
+
+const menores = [];
+const mayores = [];
+
+for (const user of users) {
+    if (user.years < 18) {
+        menores.push(user.name);
+    } else {
+        mayores.push(user.name);
+    }
+}
+console.log("Usuarios menores de edad:");
+console.log(menores);
+console.log("\nUsuarios mayores de edad:");
+console.log(mayores);
