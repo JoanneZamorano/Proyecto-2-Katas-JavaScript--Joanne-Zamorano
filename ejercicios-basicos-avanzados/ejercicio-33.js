@@ -16,5 +16,12 @@ const capitals = {
 };
 
 function getCapital(country) {
-  // insert code
+  if (capitals[country]) {
+      return country + " - " + capitals[country];
+    } else {
+      return country + " - No encontrado";
+    }
 }
+
+console.log(getCapital('Spain')); 
+console.log(getCapital('Japan')); 
