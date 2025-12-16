@@ -12,8 +12,8 @@ const placesToTravel = [
 ];
 
 for(let i = 0; i < placesToTravel.length; i++){
-    /*if(placesToTravel[i].includes(id == 11)){
-        console.log(placesToTravel[i])
-    }*/
-    console.log(placesToTravel["id"] + " - " + placesToTravel["name"])
+    if(placesToTravel[i].id == 11 || placesToTravel[i].id == 40){
+        placesToTravel.splice(i, 1);
+    }
+    console.log(placesToTravel[i].id + " - " + placesToTravel[i].name)
 }
