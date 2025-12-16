@@ -15,3 +15,12 @@ const albums = [
 ];
 
 // Añade tu código de bucle aquí
+let duracionTotal = 0;
+
+for (const album of albums) {
+    if (album.genre === 'Rock') {
+        duracionTotal += album.duration;
+    }
+}
+console.log(duracionTotal)
+
