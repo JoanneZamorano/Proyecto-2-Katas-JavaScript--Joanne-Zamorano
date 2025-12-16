@@ -16,3 +16,24 @@ const tracks = [
 ];
 
 // Añade tu código de bucle aquí
+
+/*const tracksPorGenero = [
+    { Metal: ['Enter Sandman'},
+    { Rock: ['Back in Black','Bohemian Rhapsody','Thunderstruck', 'Hotel California','Stairway to Heaven']},
+    { Pop: ['Blinding Lights','Bad Guy']},
+    { Country: ['Old Town Road']},
+    { Grunge: ['Smells Like Teen Spirit']},
+];*/ 
+
+const tracksPorGenero = {};
+
+for (const track of tracks) {
+    const genre = track.genre;
+
+    if (!tracksPorGenero[genre]) {
+        tracksPorGenero[genre] = [];
+    }
+    tracksPorGenero[genre].push(track.title);
+}
+
+console.log(tracksPorGenero);
