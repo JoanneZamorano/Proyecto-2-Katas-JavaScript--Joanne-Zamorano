@@ -18,3 +18,11 @@ const toys = [
     {id: 109, name: 'Magic 8-Ball', sellCount: 38},
     {id: 110, name: 'Troll Doll', sellCount: 20}
 ];
+
+for (const toy of toys){
+    if(toy.sellCount> 15){
+        popularToys.push(toy)
+    }
+}
+
+console.log(popularToys)
