@@ -15,3 +15,17 @@ const movies = [
 ];
 
 // Añade tu código de bucle aquí
+
+let antes2000 = 0;
+let despues2000 = 0;
+
+for (const movie of movies) {
+    if (movie.releaseYear < 2000) {
+        antes2000++;
+    } else {
+        despues2000++;
+    }
+}
+
+console.log("Películas anteriores al 2000: " + antes2000);
+console.log("Películas posteriores al 2000: " + despues2000);
