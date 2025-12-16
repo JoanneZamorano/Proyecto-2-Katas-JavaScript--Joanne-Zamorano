@@ -12,3 +12,14 @@ const foodSchedule = [
     { name: "Rice", isVegan: true },
     { name: "Pasta", isVegan: true },
 ];
+
+let contador = 0;
+
+for (let i = 0; i < foodSchedule.length; i++) {
+    if (foodSchedule[i].isVegan === false) {
+        foodSchedule[i].name = fruits[contador]; // reemplazo el nombre por la fruta
+        foodSchedule[i].isVegan = true; //cambio el estado a true porque la fruta es vegana
+        contador++;
+    }
+}
+console.log(foodSchedule);
