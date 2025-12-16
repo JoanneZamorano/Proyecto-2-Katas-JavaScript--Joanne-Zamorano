@@ -13,3 +13,12 @@ const toys = [
     {id: 71, name: 'Sylvanian Families - Familia gato'}
 ];
 
+
+const nuevoToys = []
+for (const toy of toys){
+    if(!toy.name.includes("gato")){
+        nuevoToys.push(toy)
+    }
+}
+
+console.log(nuevoToys)

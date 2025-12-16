@@ -10,3 +10,10 @@ const placesToTravel = [
     { id: 44, name: "Filipinas" },
     { id: 59, name: "Madagascar" },
 ];
+
+for(let i = 0; i < placesToTravel.length; i++){
+    /*if(placesToTravel[i].includes(id == 11)){
+        console.log(placesToTravel[i])
+    }*/
+    console.log(placesToTravel["id"] + " - " + placesToTravel["name"])
+}
