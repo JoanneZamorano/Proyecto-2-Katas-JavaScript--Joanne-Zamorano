@@ -8,3 +8,7 @@ const alien = {
     origin: 'Unknown',
     weight: 180
 };
+
+for(const propiedad in alien){
+    console.log("La propiedad " + propiedad + " tiene como valor: " + alien[propiedad])
+}
