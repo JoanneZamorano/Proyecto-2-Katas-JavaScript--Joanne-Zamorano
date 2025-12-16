@@ -16,4 +16,24 @@ const starWarsMovies = [
     { title: 'Solo', releaseYear: 2018 }
 ];
 
+
 // Añade tu código de bucle aquí
+/*const starWarsMovies = [
+    { 1970: ['A New Hope']},
+    { 1980: ['The Empire Strikes Back', 'Return of the Jedi']},
+    { 1990: ['The Phantom Menace']},
+    { 2000: ['Attack of the Clones','Revenge of the Sith']},
+    { 2010: ['The Force Awakens', 'The Last Jedi','The Rise of Skywalker','Rogue One','Solo']}
+];*/
+
+const peliculasPorDecada = {};
+
+for (const pelicula of starWarsMovies) {
+    const decada = Math.floor(pelicula.releaseYear / 10) * 10;
+    if (!peliculasPorDecada[decada]) {
+        peliculasPorDecada[decada] = [];
+    }
+    peliculasPorDecada[decada].push(pelicula.title);
+}
+
+console.log(peliculasPorDecada);
