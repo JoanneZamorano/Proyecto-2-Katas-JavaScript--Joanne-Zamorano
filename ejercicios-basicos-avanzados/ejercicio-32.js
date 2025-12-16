@@ -16,5 +16,10 @@ const xMen = [
 ];
 
 function findOldestXMen(xMen) {
-  // insert code
-}
+  let oldest = xMen[0];
+  for (man of xMen) {
+      if(man.year < oldest.year) oldest = man
+  } return oldest
+} 
+console.log(findOldestXMen(xMen))
+//Devuelve Cyclope porque es el primero que aparece del año 1963
