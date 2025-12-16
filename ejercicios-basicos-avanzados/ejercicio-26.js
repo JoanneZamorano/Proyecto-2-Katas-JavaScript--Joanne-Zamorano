@@ -17,3 +17,10 @@ const songs = [
 const rockPlaylist = [];
 
 // Añade tu código de bucle aquí
+
+for (const song of songs){
+    if(song.genre == 'Rock' && song.duration > 5.00){
+        rockPlaylist.push(song)
+    }
+}
+console.log(rockPlaylist)
