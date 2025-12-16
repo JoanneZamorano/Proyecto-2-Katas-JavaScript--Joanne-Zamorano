@@ -16,3 +16,23 @@ const movies = [
     { name: "Amélie", durationInMinutes: 110 },
     { name: "Eternal Sunshine of the Spotless Mind", durationInMinutes: 108 },
 ];
+
+const peliculaPequena = []
+const peliculaMediana = []
+const peliculaGrande = []
+
+for (const movie of movies){
+    if(movie.durationInMinutes < 100){
+        peliculaPequena.push(movie["name"])
+    }
+    if(movie.durationInMinutes >= 100 && movie.durationInMinutes < 200){
+        peliculaMediana.push(movie["name"])
+    }
+    if(movie.durationInMinutes >= 200){
+        peliculaGrande.push(movie["name"])
+    }
+}
+
+console.log("Peliculas pequeñas: " + peliculaPequena)
+console.log("Peliculas medianas: " + peliculaMediana)
+console.log("Peliculas grandes: " + peliculaGrande)
