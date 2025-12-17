@@ -16,5 +16,20 @@ const mutants = [
 ];
 
 function findMutantByPower(mutants, power) {
-  // insert code
+let coincidencias = [];
+
+  for (const mutante of mutants) {
+    if (mutante.power === power) {
+      coincidencias.push(mutante.name);
+    }
+  }
+
+  if (coincidencias.length > 0) {
+    return `Encontrados: ${coincidencias.join(' y ')}`;
+  } else {
+    return "No hay mutantes con ese poder";
+  }
 }
+
+console.log(findMutantByPower(mutants, 'magnetism'));
+console.log(findMutantByPower(mutants, 'magnetismo'));
