@@ -1,5 +1,6 @@
 // Basandote en el array siguiente, crea una lista ul > li dinámicamente en el html
-// que imprima cada uno de los albums. Que tenga la apariencia de una web completa dentro de lo posible.
+// que imprima cada uno de los albums. 
+// Que tenga la apariencia de una web completa dentro de lo posible.
 
 const albums = [
     "De Mysteriis Dom Sathanas",
@@ -8,3 +9,14 @@ const albums = [
     "Painkiller",
     "Iron Fist",
 ];
+
+const container = document.querySelector('#container');
+const ul = document.createElement('ul');
+
+for (const album of albums) {
+    const li = document.createElement('li');
+    li.textContent = album;
+    ul.appendChild(li);
+}
+
+container.appendChild(ul);
