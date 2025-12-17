@@ -26,3 +26,18 @@ const movies = [
         categories: ["comedia", "aventura", "animación"],
     },
 ];
+
+function encontrarCategorias(movies) {
+    let categoriasPeliculas = [];
+
+    for (const movie of movies) {
+        for (const categoria of movie.categories) {
+            if (!categoriasPeliculas.includes(categoria)) {
+                categoriasPeliculas.push(categoria);
+            }
+        }
+    }
+    return categoriasPeliculas;
+}
+
+console.log(encontrarCategorias(movies));
