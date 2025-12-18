@@ -1,5 +1,5 @@
 /*6.1 Dado el siguiente array, haz una suma de todos las notas de los examenes de
-los alumnos usando la función .reduce().*/
+los alumnos usando la función .reduce(). Tiene que dar 52*/
 
 const exams = [
     {name: 'Yuyu Cabeza Crack', score: 5},
@@ -13,9 +13,25 @@ const exams = [
     {name: 'Robert Kiyosaki', score: 2},
     {name: 'Keanu Reeves', score: 10}
 ];
+const sumaNotas = exams.reduce((acumulador, exam) => acumulador + exam.score, 0);
+
+console.log(sumaNotas);
 
 /*6.2 Dado el mismo array, haz una suma de todos las notas de los examenes de los
-alumnos que esten aprobados usando la función .reduce().*/
+alumnos que esten aprobados usando la función .reduce(). 42*/
 
+const sumaNotasAprobados = exams.reduce((acumulador, exam) => {
+    if (exam.score >= 5) {
+        return acumulador + exam.score;
+    }
+    return acumulador;
+    }, 0);
 
-/* 6.3 Dado el mismo array, haz la media de las notas de todos los examenes .reduce().*/
+console.log(sumaNotasAprobados);
+
+/* 6.3 Dado el mismo array, haz la media de las notas de todos los examenes .reduce(). 5.2*/
+const mediaNotas = exams.reduce((acumulador, exam) => {
+    return acumulador + exam.score;
+}, 0) / exams.length;
+
+console.log(mediaNotas);
