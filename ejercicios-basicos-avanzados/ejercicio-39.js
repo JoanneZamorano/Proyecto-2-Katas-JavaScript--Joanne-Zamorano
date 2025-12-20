@@ -39,3 +39,16 @@ const users = [
         },
     },
 ];
+
+const contadorSonido = [];
+
+for (const user of users) {    
+    for (const nombreSonido in user.favoritesSounds) {
+        if (contadorSonido[nombreSonido]) {
+            contadorSonido[nombreSonido]++;
+        } else {
+            contadorSonido[nombreSonido] = 1;
+        }
+    }
+}
+console.log(contadorSonido);
