@@ -36,3 +36,14 @@ const users = [
         },
     },
 ];
+
+let total = 0;
+let contador = 0;
+
+for (user of users){
+    for (sonido in user.favoritesSounds){
+        total += (user.favoritesSounds[sonido].volume)
+        contador++;
+    }
+}
+console.log(total/contador) 
