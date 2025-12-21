@@ -10,3 +10,13 @@ const videogames = [
     {name: 'Genshin Impact', genders: ['RPG', 'Aventura'], score: 7.5},
     {name: 'Legend of Zelda: Breath of the wild', genders: ['RPG'], score: 10},
 ]
+
+const rpgGames = videogames.filter(game => 
+    game.genders.includes('RPG')
+);
+
+const promedioPuntuacion = rpgGames.reduce((acc, game) => {
+    return acc + game.score;
+}, 0) / rpgGames.length;
+
+console.log('Puntuación media de RPG:', promedioPuntuacion);
