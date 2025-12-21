@@ -42,7 +42,7 @@ li {
     margin: 10px 0;
     padding: 15px;
     border-radius: 10px;
-    border-bottom: 30px solid rgb(22, 208, 174);
+    border-bottom: 20px solid rgb(22, 208, 174);
     transition: transform 0.15s;
     cursor: pointer;
 }
@@ -50,5 +50,5 @@ li {
 li:hover {
     transform: scale(1.1);
     background: #444;
-    border-bottom: 30px solid rgb(194, 230, 223);
+    border-bottom: 20px solid rgb(194, 230, 223);
 }
